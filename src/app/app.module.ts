@@ -7,12 +7,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
