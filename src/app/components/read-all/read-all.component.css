@@ -25,10 +25,11 @@ p {
 }
 
 .action {
-    margin: 5rem;
+    text-align: end;
+    display: block;
 }
 
 .action.button {
-    margin: 5rem;
-
+    margin: 20px;
+    padding: 10px;
 }
