@@ -1,7 +1,7 @@
 export interface Todo {
         id?: String,
-        titulo: String,
-        descricao?: String,
-        dataParaFinalizar: Date,
-        finalizado: Boolean  
+        title: String,
+        description?: String,
+        completionDate: any,
+        completed: Boolean  
 }

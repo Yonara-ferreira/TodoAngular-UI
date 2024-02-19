@@ -20,15 +20,15 @@ export class ReadAllComponent implements OnInit {
     }
 
     findAll(): void {
-        this.service.findAll().subscribe((resposta) =>{
-          this.list = resposta;
-          this.countClosed(); 
-        })
+      this.service.findAll().subscribe((resposta) =>{
+        this.list = resposta;
+        this.countClosed(); 
+      })
     }
 
     countClosed(): void{
       for(let todo of this.list){
-        if(todo.finalizado){
+        if(todo.completed){
           this.closed++;
         }
       }
