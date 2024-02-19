@@ -8,9 +8,10 @@ import { TodoService } from '../../services/todo.service';
   styleUrl: './read-all.component.css'
 })
 export class ReadAllComponent implements OnInit {
-    list: Todo[] =[];
+
+    list: Todo[] = [];
     
-    constructor(private service : TodoService){}
+    constructor(private service : TodoService ) {}
 
     ngOnInit(): void {
       this.findAll();
