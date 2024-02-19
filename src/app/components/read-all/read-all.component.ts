@@ -13,6 +13,8 @@ export class ReadAllComponent implements OnInit {
     
     constructor(private service : TodoService ) {}
 
+    closed = 0;
+
     ngOnInit(): void {
       this.findAll();
     }
@@ -20,7 +22,16 @@ export class ReadAllComponent implements OnInit {
     findAll(): void {
         this.service.findAll().subscribe((resposta) =>{
           this.list = resposta;
+          this.countClosed(); 
         })
+    }
+
+    countClosed(): void{
+      for(let todo of this.list){
+        if(todo.finalizado){
+          this.closed++;
+        }
+      }
     }
 
 }
