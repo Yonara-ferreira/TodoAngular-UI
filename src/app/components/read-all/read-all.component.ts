@@ -10,12 +10,12 @@ import { Router } from '@angular/router';
 })
 export class ReadAllComponent implements OnInit {
 
+  closed = 0;
+
     list: Todo[] = [];
     listFinished: Todo[] = [];
     
     constructor(private service : TodoService, private router: Router ) {}
-
-    closed = 0;
 
     ngOnInit(): void {
       this.findAll();
@@ -38,8 +38,8 @@ export class ReadAllComponent implements OnInit {
       item.completed = true;
       this.service.update(item).subscribe(() => {
         this.service.message('Task Completed!');
-        this.list = this.list.filter(todo => todo.id !== item.id);
-        this.closed++
+        this.list = this.list.filter((todo) => todo.id !== item.id);
+        this.closed++;
       });
     }
     
@@ -61,7 +61,7 @@ export class ReadAllComponent implements OnInit {
       });
     }
     navegar():void{
-        this.router.navigate(['finalizados'])
+        this.router.navigate(['finalizados']);
     }
 
 }

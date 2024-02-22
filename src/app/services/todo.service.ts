@@ -22,7 +22,7 @@ export class TodoService {
 
   update(todo: Todo): Observable<Todo> {
     const url = `${this.baseUrl}/${todo.id}`;
-    return this.http.put<Todo>(url,todo);
+    return this.http.put<Todo>(url , todo);
   }
 
   delete(id: any): Observable<void>{
