@@ -3,9 +3,18 @@ form {
     margin: 2rem auto 0 auto;
     text-align: center;
 }
+.form {
+    width: 100%;
+}
 
 .data-finalizar {
     text-align: start;
+}
+.todo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h1 {
@@ -14,11 +23,9 @@ h1 {
     margin-bottom: 3rem;
     color: rgb(104, 100, 100);
 }
-.form {
-    width: 80%;
-}
+
 .buttons {
-    width: 70%;
+    width: 35%;
     text-align: start;
 }
 

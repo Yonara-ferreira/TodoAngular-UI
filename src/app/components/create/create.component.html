@@ -1,10 +1,10 @@
 <form>
   <h1>CRIANDO NOVO TO-DO</h1>
-
-    <mat-form-field class="data-finalizar" appearance="fill">
+  
+    <div class="todo">
+      <mat-form-field class="data-finalizar" appearance="fill">
         <mat-label>DATA PARA FINALIZAR</mat-label>
         <input matInput [matDatepicker]="dp3" disabled>
-        <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
         <mat-datepicker #dp3 disabled="false"></mat-datepicker>
       </mat-form-field>
@@ -25,4 +25,6 @@
         <button mat-stroked-button color="primary">CRIAR</button>
         <button mat-stroked-button color="warn">CANCELAR</button>
       </div>
+
+    </div>
 </form>
