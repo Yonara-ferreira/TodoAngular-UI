@@ -20,6 +20,11 @@ export class TodoService {
     return this.http.get<Todo[]>(this.baseUrl);
   }
 
+  findById(id: any): Observable<Todo>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Todo>(url);
+  }
+
   create(todo: Todo): Observable<Todo>{
     const url = `${this.baseUrl}/create`;
     return this.http.post<Todo>(url, todo);
