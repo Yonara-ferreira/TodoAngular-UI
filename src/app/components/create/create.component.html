@@ -4,7 +4,7 @@
     <div class="todo">
       <mat-form-field class="data-finalizar" appearance="fill">
         <mat-label>DATA PARA FINALIZAR</mat-label>
-        <input matInput [matDatepicker]="dp3" disabled>
+        <input [(ngModel)] ="todo.completionDate" name="todo.completionDate" matInput [matDatepicker]="dp3" disabled>
         <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
         <mat-datepicker #dp3 disabled="false"></mat-datepicker>
       </mat-form-field>
@@ -12,17 +12,17 @@
       <div class="forms">
           <mat-form-field class="form">
               <mat-label>Titulo</mat-label>
-              <input matInput placeholder="Ex. JAVA">
+              <input [(ngModel)] ="todo.title" name="todo.title"matInput placeholder="Ex. JAVA">
             </mat-form-field>
 
             <mat-form-field class="form">
                 <mat-label>Descrição</mat-label>
-                <input matInput placeholder="Ex. Spring Boot 2">
+                <input [(ngModel)] ="todo.description" name="todo.description" matInput placeholder="Ex. Spring Boot 2">
             </mat-form-field>
       </div>
 
       <div class="buttons">
-        <button mat-stroked-button color="primary">CRIAR</button>
+        <button (click)=" create()" mat-stroked-button color="primary">CRIAR</button>
         <button (click)="cancelar()" mat-stroked-button color="warn">CANCELAR</button>
       </div>
 
